@@ -9,5 +9,5 @@ data class DailyEntry (
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     @ColumnInfo(name = "emotion") val emotionRadioBTN: String?,
     @ColumnInfo(name = "emotionalScale") val emotionalScale: String?,
-    @ColumnInfo(name = "emotionalNotes") val emotionalNotes: String?
+    @ColumnInfo(name = "emotionalNotes") val emotionalNote: String?
 )
