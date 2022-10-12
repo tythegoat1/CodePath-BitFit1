@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources >
     <!-- Base application theme. -->
     <style name="Theme.CodePathBitFit" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
@@ -12,11 +12,6 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
-        <color name="Nyanza">#FFD6F6DD</color>
-        <color name="LavBlue">#FFDAC4F7</color>
-        <color name="SalmonPink">#FFF4989C</color>
-        <color name="Bisque">#FFEBD2B4</color>
-        <color name="BlizzBlue">#FFACECF7</color>
 
     </style>
 </resources>
