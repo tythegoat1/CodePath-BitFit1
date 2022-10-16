@@ -1,6 +1,5 @@
 package com.example.codepath_bitfit
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,9 +8,9 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class EntryAdapter(val c: Context, val entryList: ArrayList<EntryData>): RecyclerView.Adapter<EntryAdapter.EntryViewHolder>() {
+class EntryAdapter(val entryList: ArrayList<EntryData>): RecyclerView.Adapter<EntryAdapter.EntryViewHolder>() {
 
-    inner class EntryViewHolder(val v: View): RecyclerView.ViewHolder(v) {
+    inner class EntryViewHolder(v: View): RecyclerView.ViewHolder(v) {
         var entryNote = v.findViewById<EditText>(R.id.entryNoteNotes)
         var entryScale = v.findViewById<TextView>(R.id.entryNoteScale)
     }
