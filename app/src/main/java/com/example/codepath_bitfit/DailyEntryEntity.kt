@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "entry_table")
-data class DailyEntry (
+data class DailyEntryEntity (
     @PrimaryKey(autoGenerate = true) val id: Long = 0,
     @ColumnInfo(name = "emotion") val emotionRadioBTN: String?,
     @ColumnInfo(name = "emotionalScale") val emotionalScale: String?,

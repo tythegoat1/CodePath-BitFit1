@@ -19,172 +19,63 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-    <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:orientation="vertical"
-        android:padding="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/checkingInTextView">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:id="@+id/radioButton1"
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-
-                android:text="@string/joy"
-                android:textAlignment="center"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/radioButton2"
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-
-                android:text="@string/fear"
-                android:textAlignment="center"
-                android:textSize="12sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:id="@+id/radioButton4"
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-
-                android:text="@string/sadness"
-                android:textAlignment="center"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/radioButton3"
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-
-                android:text="@string/disgust"
-                android:textAlignment="center"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:id="@+id/radioButton5"
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-
-                android:text="@string/anger"
-                android:textAlignment="center"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/radioButton6"
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-
-                android:text="@string/surprised"
-                android:textAlignment="center"
-                android:textSize="12sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-
-            <RadioButton
-                android:id="@+id/radioButton7"
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="5dp"
-
-                android:text="@string/anxious"
-                android:textAlignment="center"
-                android:textSize="12sp" />
-
-            <RadioButton
-                android:id="@+id/radioButton8"
-                android:layout_width="85dp"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="5dp"
-
-                android:text="@string/confident"
-                android:textAlignment="center"
-                android:textSize="12sp" />
-        </LinearLayout>
-    </RadioGroup>
-
     <TextView
-        android:id="@+id/scaleTextView"
+        android:id="@+id/dateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:hint="@string/scale"
+        android:layout_marginBottom="9dp"
+        android:text="10/10/2022"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/slider"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/checkingInTextView"
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <com.google.android.material.slider.Slider
         android:id="@+id/slider"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:thumbColor="@color/design_default_color_secondary"
-        app:trackColor="@color/design_default_color_secondary_variant"
         android:layout_margin="20dp"
         android:stepSize=".5"
         android:valueFrom="0"
         android:valueTo="10"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/dateTextView"
+        app:thumbColor="@color/design_default_color_secondary"
+        app:trackColor="@color/design_default_color_secondary_variant" />
 
     <EditText
+        android:id="@+id/whyFeelings"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="@string/why_string"
         app:layout_constraintTop_toBottomOf="@+id/slider"
         android:layout_marginTop="10dp"
         android:layout_margin="20dp"
-        android:autofillHints="@string/why_string" />
+        android:autofillHints="@string/why_string"
+        android:inputType="textShortMessage" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <Button
         android:id="@+id/entryBackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:contentDescription="@string/todo"
-        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:text="@string/back"
         app:fabSize="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:maxImageSize="30dp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <Button
         android:id="@+id/entryPostButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="@string/post"
         android:contentDescription="@string/todo"
-        android:src="@drawable/ic_baseline_post_add_24"
         app:fabSize="auto"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

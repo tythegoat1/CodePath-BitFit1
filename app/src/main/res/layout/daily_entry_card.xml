@@ -3,7 +3,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/dailyEntryCard"
-    android:background="@color/teal_200"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="7dp"
@@ -20,48 +19,37 @@
         android:textColorHint="@color/black"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/entryNoteEmotion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:hint="Happy"
-        android:textColor="@color/black"
-        android:textColorHint="@color/black"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/entryNoteScale"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
         android:fontFamily="serif-monospace"
         android:hint="7"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/entryNoteNotes"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/entryNoteEmotion"
-        app:layout_constraintTop_toBottomOf="@+id/entryNoteEmotion" />
+        />
 
     <TextView
         android:id="@+id/entryNoteNotes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
         android:fontFamily="serif"
         android:hint="I got an A on my assignment"
         android:textColor="@color/black"
         android:textColorHint="@color/black"
         android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="@+id/entryNoteDate"
-        app:layout_constraintTop_toBottomOf="@+id/entryNoteDate" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/entryNoteDate"
+        android:layout_marginTop="10dp"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
