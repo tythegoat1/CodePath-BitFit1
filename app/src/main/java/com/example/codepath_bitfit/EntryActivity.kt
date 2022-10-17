@@ -19,7 +19,6 @@ import java.util.*
 class EntryActivity : AppCompatActivity() {
 
 
-
     @RequiresApi(Build.VERSION_CODES.N)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -60,7 +59,11 @@ class EntryActivity : AppCompatActivity() {
             // TODO Save event to database
             lifecycleScope.launch(Dispatchers.IO) {
                 (application as DailyEntryApplication).db.dailyEntryDao().insert(
-                    DailyEntryEntity(currentDate, sliderNum.value.toString(), feelingText.toString())
+                    DailyEntryEntity(
+                        currentDate,
+                        sliderNum.value.toString(),
+                        feelingText.toString()
+                    )
                 )
 
             }

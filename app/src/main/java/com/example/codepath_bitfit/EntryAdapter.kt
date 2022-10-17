@@ -8,9 +8,10 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 
-class EntryAdapter(val entryList: ArrayList<EntryData>): RecyclerView.Adapter<EntryAdapter.EntryViewHolder>() {
+class EntryAdapter(val entryList: ArrayList<EntryData>) :
+    RecyclerView.Adapter<EntryAdapter.EntryViewHolder>() {
 
-    inner class EntryViewHolder(v: View): RecyclerView.ViewHolder(v) {
+    inner class EntryViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         var entryNote = v.findViewById<EditText>(R.id.entryNoteNotes)
         var entryScale = v.findViewById<TextView>(R.id.entryNoteScale)
     }
@@ -21,14 +22,14 @@ class EntryAdapter(val entryList: ArrayList<EntryData>): RecyclerView.Adapter<En
         return EntryViewHolder(v)
     }
 
+    override fun getItemCount(): Int {
+        return entryList.size
+    }
+
     override fun onBindViewHolder(holder: EntryViewHolder, position: Int) {
         val newEntry = entryList[position]
         holder.entryScale = newEntry.scale
         holder.entryNote.text = newEntry.note
-    }
-
-    override fun getItemCount(): Int {
-        return entryList.size
     }
 
 }
