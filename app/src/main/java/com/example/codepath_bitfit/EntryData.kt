@@ -4,7 +4,7 @@ import android.text.Editable
 import android.widget.TextView
 
 data class EntryData (
-    val date: TextView?,
-    val scale: TextView?,
-    val note: Editable?
+    val dateModel: TextView?,
+    val scaleModel: TextView?,
+    val noteModel: Editable?
     )

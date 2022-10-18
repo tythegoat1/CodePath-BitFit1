@@ -28,8 +28,8 @@ class EntryAdapter(val entryList: ArrayList<EntryData>) :
 
     override fun onBindViewHolder(holder: EntryViewHolder, position: Int) {
         val newEntry = entryList[position]
-        holder.entryScale = newEntry.scale
-        holder.entryNote.text = newEntry.note
+        holder.entryScale = newEntry.scaleModel
+        holder.entryNote.text = newEntry.noteModel
     }
 
 }
