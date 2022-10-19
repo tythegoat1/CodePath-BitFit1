@@ -44,7 +44,6 @@
         android:text="@string/add_post"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintBottom_totopOf="@+id/bottom_navigation"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
