@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dp"
+    android:background="@color/black"
     tools:context=".MainActivity">
 
     <TextView
@@ -13,6 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-black"
+        android:textColor="@color/white"
         android:text="@string/check_in_s"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -25,8 +27,11 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/checkingInTextView"
+        app:layout_constraintVertical_bias="0.0"
+        tools:listitem="@layout/daily_entry_card" />
 
     <Button
         android:id="@+id/addNoteButton"
