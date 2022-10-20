@@ -33,18 +33,6 @@
         app:layout_constraintVertical_bias="0.0"
         tools:listitem="@layout/daily_entry_card" />
 
-    <Button
-        android:visibility="invisible"
-        android:id="@+id/addNoteButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="80dp"
-        android:contentDescription="@string/add_post_button"
-        android:text="@string/add_post"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
