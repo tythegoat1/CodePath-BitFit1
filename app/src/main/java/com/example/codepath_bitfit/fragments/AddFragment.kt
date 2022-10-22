@@ -1,41 +1,49 @@
-package com.example.codepath_bitfit
+package com.example.codepath_bitfit.fragments
+
 
 import android.icu.text.SimpleDateFormat
 import android.os.Build
 import android.os.Bundle
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import androidx.annotation.RequiresApi
-import androidx.appcompat.app.AppCompatActivity
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
+import com.example.codepath_bitfit.DailyEntryApplication
+import com.example.codepath_bitfit.DailyEntryEntity
+import com.example.codepath_bitfit.R
 import com.google.android.material.slider.Slider
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.util.*
 
 
-class EntryActivity : AppCompatActivity() {
-
+class AddFragment : Fragment() {
 
     @RequiresApi(Build.VERSION_CODES.N)
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.entry_activity)
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Change this statement to store the view in a variable instead of a return statement
+        val view = inflater.inflate(R.layout.fragment_add, container, false)
 
         //Slider
-        val sliderNum = findViewById<Slider>(R.id.slider)
+        val sliderNum = view.findViewById<Slider>(R.id.slider)
 
         //EditText
-        val feelingText = findViewById<EditText>(R.id.whyFeelings).text
+        val feelingText = view.findViewById<EditText>(R.id.whyFeelings).text
 
         //Buttons
-        val backButton = findViewById<Button>(R.id.entryBackButton)
-        val postButton = findViewById<Button>(R.id.entryPostButton)
+        val postButton = view.findViewById<Button>(R.id.entryPostButton)
 
         //Setting current date
-        val textView: TextView = findViewById(R.id.dateTextView)
+        val textView: TextView = view.findViewById(R.id.dateTextView)
         val simpleDateFormat = SimpleDateFormat("MM.dd.yyyy")
         val currentDate = simpleDateFormat.format(Date())
         currentDate.also { textView.text = it }
@@ -54,26 +62,22 @@ class EntryActivity : AppCompatActivity() {
 
         //Handling post click event
         postButton.setOnClickListener {
-            Toast.makeText(applicationContext, feelingText, Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, feelingText, Toast.LENGTH_SHORT).show()
 
             // TODO Save event to database
             lifecycleScope.launch(Dispatchers.IO) {
-                (application as DailyEntryApplication).db.dailyEntryDao().insert(
+                (activity?.application as DailyEntryApplication).db.dailyEntryDao().insert(
                     DailyEntryEntity(
                         currentDate,
-                        sliderNum.value.toString(),
+                        sliderNum.value,
                         feelingText.toString()
                     )
                 )
 
             }
             // Empty text fields
-            findViewById<EditText>(R.id.whyFeelings).setText("")
-
+            view.findViewById<EditText>(R.id.whyFeelings).setText("")
         }
-
-        //Handling back click event
-        backButton.setOnClickListener { finish() }
-
+        return view
     }
 }
