@@ -24,7 +24,7 @@ class EntryAdapter() :
 
     class EntryViewHolder(v: View) : RecyclerView.ViewHolder(v) {
         var date = v.findViewById<TextView>(R.id.entryNoteDate)
-        var entryNoteScale = v.findViewById<Slider>(R.id.entryNoteScale).value
+        //var entryNoteScale = v.findViewById<Slider>(R.id.entryNoteScale).value
         var entryNoteNotes = v.findViewById<TextView>(R.id.entryNoteNotes)
     }
 
@@ -42,7 +42,7 @@ class EntryAdapter() :
     override fun onBindViewHolder(holder: EntryViewHolder, position: Int) {
         val newEntry = entryList[position]
         holder.date.setText(currentDate)
-        holder.entryNoteScale = newEntry.emotionalScale
+        //holder.entryNoteScale = newEntry.emotionalScale
         holder.entryNoteNotes.text = newEntry.emotionalNote
     }
 
