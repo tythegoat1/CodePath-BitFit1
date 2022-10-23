@@ -62,7 +62,7 @@ class AddFragment : Fragment() {
 
         //Handling post click event
         postButton.setOnClickListener {
-            Toast.makeText(context, "Added to Database", Toast.LENGTH_SHORT).show()
+            Toast.makeText(context, "Entry added", Toast.LENGTH_SHORT).show()
 
             // TODO Save event to database
             lifecycleScope.launch(Dispatchers.IO) {

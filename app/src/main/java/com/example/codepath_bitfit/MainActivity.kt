@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         // Set default selection
-        bottomNavigationView.selectedItemId = R.id.menuDashboardIcon
+        bottomNavigationView.selectedItemId = R.id.menuListIcon
     }
 
     private fun replaceFragment(fragment: Fragment) {

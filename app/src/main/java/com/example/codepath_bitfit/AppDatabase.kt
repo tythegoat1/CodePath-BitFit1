@@ -20,7 +20,7 @@ abstract class AppDatabase : RoomDatabase() {
                 INSTANCE ?: buildDatabase(context).also { INSTANCE = it }
             }
 
-        private fun buildDatabase(context: Context) =
+        fun buildDatabase(context: Context) =
             Room.databaseBuilder(
                 context.applicationContext,
                 AppDatabase::class.java, "Entries-db"
