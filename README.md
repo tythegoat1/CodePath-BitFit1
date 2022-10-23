@@ -1,36 +1,33 @@
-# Android Project 5 - BitFit
+# Android Project 6 - Mental Health Tracker
 
 Submitted by: Taj-Hakeem Ryles
 
-BitFit is a health metrics app that allows users to track ... [TODO] 
+Mental is a health metrics app that allows users to track there overall mental health level on a scael from 1 - 10
 
-Time spent: **X** hours spent in total
+Time spent: 26 hours spent in total
 
 ## Required Features
 
 The following **required** functionality is completed:
 
-- [x] **At least one health metric is tracked (based on user input)**
-  - Chosen metric(s): `[TODO: FILL ME IN TO GET CREDIT]`
-- [x] **There is a "create entry" UI that prompts users to make their daily entry**
-- [ ] **New entries are saved in a database and then updated in the RecyclerView**
-- [x] **On application restart, previously entered entries are preserved (i.e., are *persistent*)**
- 
+- [x] **Use at least 2 Fragments**
+- [ ] **Create a new dashboard fragment where users can see a summary of their entered data**
+- [x] **Use one of the Navigation UI Views (BottomNavigation, Drawer Layout, Top Bar) to move between the fragments**
+
 The following **optional** features are implemented:
 
-- [ ] **Create a UI for tracking averages and trends in metrics**
-- [ ] **Improve and customize the user interface through styling and coloring**
-- [ ] **Implement orientation responsivity**
-- [ ] **Add a daily photo feature**
+- [ ] **Add a more advanced UI (e.g: Graphing) for tracking trends in metrics**
+- [ ] **Implement daily notifications to prompt users to fill in their data**
 
 The following **additional** features are implemented:
+
+- [ ] List anything else that you can get done to improve the app functionality!
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='walkthrough2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='walkthrough3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ... LiceCap 
@@ -44,9 +41,11 @@ GIF created with ... LiceCap
 Describe any challenges encountered while building the app.
 I am still struglle with updateign the UI from the database. 
 
+And pull specfic data from the database.
+
 ## License
 
-    Copyright [2022] [Taj-Hakeem Ryles]
+    Copyright [yyyy] [name of copyright owner]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
